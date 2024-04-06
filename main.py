@@ -18,12 +18,12 @@ lancer=False
 # ------ code pour initialiser ------
 def loadimage(file):
     return pygame.image.load(file).convert_alpha()
-background=loadimage("background.png")
+background=loadimage("images/background.png")
 pygame.mixer.music.load("angry-birds.ogg")
 pygame.mixer.music.play(-1)
-bird=loadimage("bird.png")
-sling=loadimage("sling.png")
-sling2=loadimage("sling2.png")
+bird=loadimage("images/bird.png")
+sling=loadimage("images/sling.png")
+sling2=loadimage("images/sling2.png")
 birdrect=bird.get_rect()
 birdrect.x,birdrect.y=(160,380)
 brc=birdrect.copy()

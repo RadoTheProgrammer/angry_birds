@@ -81,14 +81,14 @@ class Circle(Object):
 
 
 class Bird(Circle):
-    img = pygame.image.load('bird.png').convert_alpha()
+    img = pygame.image.load('images/bird.png').convert_alpha()
 
     def __init__(self, pos):
         super().__init__(pos, type=2)
 
 
 class Pig(Circle):
-    img = pygame.image.load('pig.png').convert_alpha()
+    img = pygame.image.load('images/pig.png').convert_alpha()
     img = pygame.transform.scale(img, (64, 64))
     
     def __init__(self, pos=(100, 100)):
@@ -106,11 +106,11 @@ class Rectangle(Object):
 
 
 class Beam(Rectangle):
-    img = pygame.image.load('beam.png').convert_alpha()
+    img = pygame.image.load('images/beam.png').convert_alpha()
 
 
 class Column(Rectangle):
-    img = pygame.image.load('column.png').convert_alpha()
+    img = pygame.image.load('images/column.png').convert_alpha()
 
 
 class Game:
@@ -250,5 +250,3 @@ class Game:
         self.data=""
     def file(self):
         return "angry_birds_levels/"+repr(self.level)+".txt"
-if __name__=="__main__":
-    import angry_birds
