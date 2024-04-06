@@ -42,7 +42,7 @@ def post_solve_bird_wood(arbiter, space, _):
         Game.score += 5000
 
 
-# type: 0=wood, 1=pig, 2=bird
+## type: 0=wood, 1=pig, 2=bird
 space.add_collision_handler(2, 1).post_solve = post_solve_bird_pig
 space.add_collision_handler(2, 0).post_solve = post_solve_bird_wood
 
