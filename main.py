@@ -1,12 +1,16 @@
 # importer et initialiser le module Pygame
-import pygame, sys
-from pygame.locals import *
-from classes import *
+import sys
 import os
+
+import pygame
+from pygame.locals import *
+
+from classes import *
+
 os.chdir(os.path.dirname(__file__))
-pygame.init()
+pygame.init() #pylint: disable=no-member
 # définir des variables
-NOIR = Color(0, 0, 0)
+NOIR = pygame.Color(0, 0, 0)
 taille = 1200, 600
 
 # créer fenêtre et initialiser des variables
@@ -44,7 +48,7 @@ while jouer:
 #         print(event)
         if event.type == QUIT:
             jouer = False
-        elif event.type==MOUSEBUTTONDOWN:
+        elif event.type== MOUSEBUTTONDOWN:
             if birdrect.collidepoint(event.pos):
                 lancer=True
         elif event.type==MOUSEMOTION:
